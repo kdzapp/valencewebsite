@@ -1,5 +1,525 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html
+  head
+    title Valence
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    // Included Google Fonts
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100', rel='stylesheet', type='text/css')
+    // CSS Files comes here
+    link(href='../public/css/grid12.css', rel='stylesheet', media='screen')
+    // Grid System
+    link(href='../public/css/james_typography.css', rel='stylesheet', media='screen')
+    // James Framework - TYPOGRAPHY
+    link(href='../public/css/main.css', rel='stylesheet', media='screen')
+    // Main CSS file
+    link(href='../public/css/color_scheme_light.css', rel='stylesheet', media='screen')
+    // Color scheme (dark/light)
+    link(href='../public/css/colors/color_palette_blue.css', rel='stylesheet', media='screen')
+    // Color palette
+    link(href='../public/css/rapid-icons.css', rel='stylesheet', media='screen')
+    // James Framework - ICONS
+    link(href='../public/css/js_styles/jquery.maximage.min.css', rel='stylesheet', media='screen')
+    // MaxImage background image slideshow
+    link(href='../public/css/responsivity.css', rel='stylesheet', media='screen')
+    // Responsive Fixes
+    link(href='../public/css/animate.css', rel='stylesheet', media='screen')
+    // Animate - animations
+    link(href='../public/css/nivo-lightbox.css', rel='stylesheet', media='screen')
+    // Lightbox Styles
+    link(href='../public/css/nivo_lightbox_themes/default/default.css', rel='stylesheet', media='screen')
+    // Lightbox Styles
+    link(href='../public/css/owl.carousel.css', rel='stylesheet', media='screen')
+    // Owl - Carousel
+    link(href='../public/css/owl.theme.css', rel='stylesheet', media='screen')
+    // Owl - Carousel
+    link(href='../public/css/owl.transitions.css', rel='stylesheet', media='screen')
+    // Owl - Carousel
+    // Modernizer and IE specyfic files
+    script(src='../public/js/modernizr.custom.js')
+  body
+    // Mobile nav
+    #cbp-spmenu-s2.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-right
+      .mobile_nav_close_button
+        a#hideRight(href='')
+          .button_icon.close_icon(data-icon='')
+      nav#mobile_menu_content
+        a(href='#more_info') Overview
+        a(href='#features') Features
+        a(href='#reviews') Reviews
+        a(href='#screenshots') Screenshots
+        a(href='#contact') Contact
+    // //Mobile nav
+    #preloader_container
+      // Preloader Screen
+      header.preloader_header
+        .preloader_loader
+          svg.preloader_inner(width='60px', height='60px', viewbox='0 0 80 80')
+            path.preloader_loader_circlebg(d='M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z')
+            path#preloader_loader_circle.preloader_loader_circle(d='M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z')
+      // //Preloader Screen
+      // Fullscreen homepage
+      section.hero_fullscreen.background_solid.mockups.menu_bar-waypoint(data-animate-down='menu_bar-hide', data-animate-up='menu_bar-hide')
+        // This section class is where you can edit background choice (background_single, background_slider, background_video) you can also enable gradient overlay (gradient_overlay) and mockups (mockups)
+        // Logo and navigation
+        .container.top_bar
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              img.logo(src='../public/images/logo_light.png', alt='logo')
+              nav.navigation_desktop
+                ul
+                  li
+                    a.visible-lg.visible-md.go_to_overview(href='#more_info') Overview
+                  li
+                    a.visible-lg.visible-md(href='#features') Features
+                  li
+                    a.visible-lg.visible-md(href='#reviews') Reviews
+                  li
+                    a.visible-lg.visible-md(href='#screenshots') Screenshots
+                  li
+                    a.visible-lg.visible-md(href='#contact') Contact
+                  li
+                    .mobile_nav_open_button.hidden-lg.hidden-md
+                      a#showRight_1(href='')
+                        .button_icon.close_icon(data-icon='')
+        // //Logo and navigation
+        // Main content
+        #main_content.container.align-left
+          .content_container.row
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6.home_content
+              h2.slogan Show your mobile app with James!
+              h6
+                | It`s a mobile app landing page designed with material design in core. Present your app the best way it deserves.
+              // CTA Buttons
+              .cta_button_area
+                div
+                  button.btn.waves-effect.waves-light.subscribe-submit Purchase Now!
+                a(href='#more_info')
+                  small Not sure? Learn more.
+              // //CTA Buttons
+            // Mockups
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6.home_mockup
+              img.mockup-animation1.home_mockup_image(src='../public/images/mockups/1/back.png', alt='')
+              img.mockup-animation2.home_mockup_image(src='../public/images/mockups/1/front.png', alt='')
+            // //Mockups
+        // //Main content
+        // Video Background
+        // //Video Background
+        // Slider Background
+        #maximage_slider
+          img(src='../public/images/background_slider_01.jpg', alt='')
+          img(src='../public/images/background_slider_02.jpg', alt='')
+          img(src='../public/images/background_slider_03.jpg', alt='')
+          img(src='../public/images/background_slider_04.jpg', alt='')
+        // //Slider Background
+        // Single Image Background
+        #maximage_single
+          img(src='../public/images/home_background_01.jpg', alt='')
+        // //Single Image Background
+      // //Homepage
+      // Menu bar
+      header#menu_bar.menu_bar
+        .container
+          a.go_to_home.logo_dark(href='')
+            img.logo(src='../public/images/logo_dark.png', alt='logo')
+          a.go_to_home.logo_light(href='')
+            img.logo(src='../public/images/logo_light.png', alt='logo')
+          nav.menu_bar_navigation
+            ul
+              li.visible-lg.visible-md
+                a.go_to_overview(href='#more_info') Overview
+              li.visible-lg.visible-md
+                a(href='#features') Features
+              li.visible-lg.visible-md
+                a(href='#reviews') Reviews
+              li.visible-lg.visible-md
+                a(href='#screenshots') Screenshots
+              li.visible-lg.visible-md
+                a(href='#contact') Contact
+              li.visible-lg.visible-md.last-item
+                button.btn.waves-effect.waves-light.subscribe-submit Purchase
+              li.hidden-lg.hidden-md
+                .mobile_nav_open_button
+                  a#showRight_2(href='')
+                    .button_icon.close_icon(data-icon='')
+      // // Menu bar
+      // More Info ####################
+      section#more_info.menu_bar-waypoint.subsection(data-animate-down='menu_bar-show', data-animate-up='menu_bar-hide')
+        .container
+          .row
+            .col-xs-12.col-sm-10.col-md-10.col-lg-10.col-sm-offset-1.col-md-offset-1.col-lg-offset-1.align-center.content_anim1.intro
+              h3 The best way to show your app to the world
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        .more_info_mockup.content_anim2
+          img.img_responsive(src='../public/images/mockups/subsection_mockups/1.png', alt='')
+        .container
+          .row
+            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+              .iconbox.content_anim3
+                .iconbox_icon(data-icon='')
+                .iconbox_content
+                  h5 Responsive Design
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore.
+            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+              .iconbox.content_anim4
+                .iconbox_icon(data-icon='')
+                .iconbox_content
+                  h5 Clean Code
+                  p
+                    | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+              .iconbox.content_anim5
+                .iconbox_icon(data-icon='')
+                .iconbox_content
+                  h5 1500+ Icons
+                  p
+                    | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      // //More info
+      // Features ####################
+      section#features.subsection
+        .container
+          .row
+            .col-xs-12.col-sm-6.col-md-6.col-lg-6
+              .mockup_container
+                img.img_responsive.mockup_back.content_anim10(src='../public/images/mockups/subsection_mockups/2a.png', alt='')
+                img.img_responsive.mockup_front.content_anim9(src='../public/images/mockups/subsection_mockups/2b.png', alt='')
+            .col-xs-12.col-sm-6.col-md-6.col-lg-6
+              .intro.content_anim6
+                h3 Present your app in a beautiful and elegant way.
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              .iconbox.content_anim7
+                .iconbox_icon(data-icon='')
+                .iconbox_content
+                  h5 Creative Design
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.
+              .iconbox.content_anim8
+                .iconbox_icon(data-icon='')
+                .iconbox_content
+                  h5 Cross-Browser Support
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.
+      // //Features
+      // Features - Video ####################
+      section#features_video.subsection
+        .container
+          .row
+            .col-xs-12.col-sm-6.col-md-6.col-lg-6
+              .intro.content_anim12
+                h3 Use video to show how awesome your app is!
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                p
+                  | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .col-xs-12.col-sm-5.col-md-5.col-lg-5.col-sm-offset-1.col-md-offset-1.col-lg-offset-1
+              ul.icon_list
+                li.content_anim13
+                  .icon_small.float-left(data-icon='')
+                  h6 Contact & Newsletter Form Included
+                li.content_anim14
+                  .icon_small.float-left(data-icon='')
+                  h6 Image, Slider, Video Backgrounds
+                li.content_anim15
+                  .icon_small.float-left(data-icon='')
+                  h6 Mobile App Mockups Included
+                li.content_anim16
+                  .icon_small.float-left(data-icon='')
+                  h6 Easy To Customise Animations
+      // //Features - Video
+      // Reviews ####################
+      section#reviews.subsection_parallax(data-stellar-background-ratio='0.6')
+        .container
+          .row
+            .col-xs-12.col-sm-8.col-md-8.col-lg-8.col-sm-offset-2.col-md-offset-2.col-lg-offset-2.content_anim17
+              .owl-carousel
+                .single_review
+                  img.img-circle(src='../public/images/review_01.jpg', alt='')
+                  .review_content
+                    h6
+                      | An elephant and a camel are talking. The elephant asks, "Why do you have boobs on your back?" The camel replies, "Ha! That's a funny question coming from an animal with a penis hanging from his face.”
+                    p - John McLane, Microsoft
+                .single_review
+                  img.img-circle(src='../public/images/review_02.jpg', alt='')
+                  .review_content
+                    h6
+                      | I was feeling pretty creaky after hearing the TV reporter say, "To contact me, go to my Facebook page, follow me on Twitter, or try me the old-fashioned way-e-mail.
+                    p - Jane Kovalsky, Apple
+                .single_review
+                  img.img-circle(src='../public/images/review_03.jpg', alt='')
+                  .review_content
+                    h6
+                      | A Sergeant was addressing a squad of 25 and said: "I have a nice easy job for the laziest man here.  Put up your hand if you are the laziest."  24 men raised their hands, and the sergeant asked the other man "why didn't you raise your hand?"  The man replied: "Too much trouble raising the hand, Sarge."
+                    p - Mat Patterson, Google
+                .single_review
+                  img.img-circle(src='../public/images/review_04.jpg', alt='')
+                  .review_content
+                    h6 The 21st century: Deleting history is more important than making it.
+                    p - Billy
+      // //Reviews
+      // Reviews - Logos ####################
+      section#reviews_logos.subsection
+        .container
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12.align-center
+              .intro.content_anim18
+                h3 Our app in newspapers!
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          .row
+            .col-xs-6.col-sm-4.col-md-2.col-lg-2.reviews_logo.content_anim19
+              img(src='../public/images/reviews_logos/logo1.png', alt='')
+            .col-xs-6.col-sm-4.col-md-2.col-lg-2.reviews_logo.content_anim20
+              img(src='../public/images/reviews_logos/logo2.png', alt='')
+            .col-xs-6.col-sm-4.col-md-2.col-lg-2.reviews_logo.content_anim21
+              img(src='../public/images/reviews_logos/logo3.png', alt='')
+            .col-xs-6.col-sm-4.col-md-2.col-lg-2.reviews_logo.content_anim22
+              img(src='../public/images/reviews_logos/logo4.png', alt='')
+            .col-xs-6.col-sm-4.col-md-2.col-lg-2.reviews_logo.content_anim23
+              img(src='../public/images/reviews_logos/logo5.png', alt='')
+            .col-xs-6.col-sm-4.col-md-2.col-lg-2.reviews_logo.content_anim24
+              img(src='../public/images/reviews_logos/logo6.png', alt='')
+      // //Reviews - Logos
+      // Screenshots ####################
+      section#screenshots.subsection
+        .container
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12.align-center
+              .intro.content_anim25
+                h3 Screenshots time!
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        #screenshots_gallery.content_anim26
+          .owl-carousel-screenshots
+            div
+              a(href='../public/images/screenshots/1.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/1.jpg', alt='')
+            div
+              a(href='../public/images/screenshots/2.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/2.jpg', alt='')
+            div
+              a(href='../public/images/screenshots/3.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/3.jpg', alt='')
+            div
+              a(href='../public/images/screenshots/4.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/4.jpg', alt='')
+            div
+              a(href='../public/images/screenshots/5.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/5.jpg', alt='')
+            div
+              a(href='../public/images/screenshots/6.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/6.jpg', alt='')
+            div
+              a(href='../public/images/screenshots/7.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/7.jpg', alt='')
+            div
+              a(href='../public/images/screenshots/8.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/8.jpg', alt='')
+            div
+              a(href='../public/images/screenshots/9.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/9.jpg', alt='')
+            div
+              a(href='../public/images/screenshots/10.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/10.jpg', alt='')
+            div
+              a(href='../public/images/screenshots/11.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/11.jpg', alt='')
+            div
+              a(href='../public/images/screenshots/12.jpg', data-lightbox-gallery='gallery1')
+                img.shadow(src='../public/images/screenshots/12.jpg', alt='')
+      // //Screenshots
+      // Newsletter ####################
+      section#newsletter.subsection_parallax(data-stellar-background-ratio='0.6')
+        .container
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12.align-center.content_anim27
+              .intro
+                h3 Sign up to Our newsletter
+                p
+                  | Lorem ipsumpapers dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12.align-center.content_anim28
+              // Newsletter Form
+              .newsletter_form
+                form#subscribe-form(action='php/send.php', method='post')
+                  .input-field
+                    .prefix(data-icon='')
+                    input#email.validate(type='email', name='email')
+                    label(for='email') Email address
+                  button#subscribe-form-submit.btn.waves-effect.waves-light.subscribe-submit(type='submit', name='action') Subscribe Now
+                #preview
+              // //Newsletter form
+      // //Newsletter
+      section#contact.subsection
+        .container
+          .row
+            .col-xs-12.col-sm-5.col-md-5.col-lg-5.content_anim29
+              h3 Contact Info
+              p
+                | James is a responsive "under construction" page. It will fit perfectly as a placeholder for your website or landing page.
+              p
+                | It comes with several content and background variants. James is also equiped with some cool devices mockups for app version.
+              ul.icon_list
+                li
+                  .icon_small.float-left(data-icon='')
+                  h6
+                    | 1234 Street Name, City Name,
+                    br
+                    | United States
+                li
+                  .icon_small.float-left(data-icon='')
+                  h6 (123) 456-7890
+                li
+                  .icon_small.float-left(data-icon='')
+                  h6
+                    a(href='mailto:webdesign@shegy.pl') webdesign@shegy.pl
+              p
+                | James has of corse well formated and commented code and comes with in depth documentation.
+            .col-xs-12.col-sm-5.col-md-5.col-lg-5.col-sm-offset-2.col-md-offset-2.col-lg-offset-2.content_anim30
+              h3 Contact Us
+              p
+                | Contact Us using contact form below. Form is fully working and very easy to customise.
+              // Contact Form
+              form#contact-form(action='php/contactform.php', method='post')
+                .contact_form
+                  .input-field
+                    input#first_name(type='email', name='contact-name')
+                    label(for='first_name') Your Name
+                  .input-field
+                    input#contact_email(type='email', name='contact-email')
+                    label(for='contact_email') Email Address
+                  .input-field
+                    textarea.materialize-textarea(name='contact-message')
+                    label Message
+                button.btn.waves-effect.waves-light(type='submit', name='action') Send
+              // //Contact Form
+              #message
+                #alert
+              // Message container
+      // //More info
+      section#footer.subsection
+        .container
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12.align-center
+              // Social Icons
+              .social_icons_container.align-center
+                .social_icons
+                  ul
+                    li
+                      .social_icon.twitter_icon(data-icon='', onclick="location.href='#'")
+                    li
+                      .social_icon.facebook_icon(data-icon='', onclick="location.href='#'")
+                    li
+                      .social_icon.linkdin_icon(data-icon='', onclick="location.href='#'")
+                    li
+                      .social_icon.dribbble_icon(data-icon='', onclick="location.href='#'")
+              // //Social Icons
+              p
+                small Copyright © 2015 James, Made with ❤ by Mat Przegietka
+      // //More info
+    // //preloader
+    // JavaScript plugins comes here
+    script(src='../public/js/jquery-2.1.3.min.js')
+    // jQuery
+    script(src='../public/js/jquery.easing.min.js')
+    // jQuery easing
+    script(src='../public/js/jquery.scrollTo.js')
+    // Scroll to
+    script(src='../public/js/jquery.cycle.all.min.js')
+    // jQuery cycle
+    script(src='../public/js/jquery.form.js')
+    // jQuery form
+    script(src='../public/js/jquery.maximage.min.js')
+    // MaxImage background image slideshow
+    script(src='../public/js/materialize.js')
+    // Materialize
+    script(src='../public/js/classie.js')
+    // Class helper function
+    script(src='../public/js/pathLoader.js')
+    // Preloader Loading Animation
+    script(src='../public/js/preloader.js')
+    // Preloader
+    script(src='../public/js/count_down.js')
+    // Count Down Timer
+    script(src='../public/js/happy.js')
+    // Newsletter form validation
+    script(src='../public/js/happy.methods.js')
+    // Newsletter form validation
+    script(src='../public/js/retina.js')
+    // Retina.js - support for HiDPI Displays
+    script(src='../public/js/waypoints.min.js')
+    // Waypoints
+    script(src='../public/js/nivo-lightbox.min.js')
+    // Lightbox/Modalbox
+    script(src='../public/js/jquery.fitvids.js')
+    // Responsive Video
+    script(src='../public/js/jquery.stellar.js')
+    // Parallax backgrounds
+    script(src='../public/js/owl.carousel.js')
+    // Owl Carousel
+    script(src='../public/js/main.js')
+    // Main Js file
+    // Show message after newsletter form submit
+    script(type='text/javascript').
+      $('document').ready(function()
+      {
+      $('#subscribe-form').ajaxForm( {
+      target: '#preview',
+      success: function() {
+      $('#preview').addClass( "show_message" );
+      }
+      });
+      });
+    // MOBILE NAVIGATION
+    script.
+      var showRight_1 = document.getElementById( "showRight_1" ),
+      showRight_2 = document.getElementById( "showRight_2" ),
+      hideRight = document.getElementById( 'hideRight' ),
+      menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+      body = document.body;
+      showRight_1.onclick = function(event) {
+      "use strict";
+      event.preventDefault();
+      classie.toggle( this, 'active' );
+      classie.toggle( menuRight, 'cbp-spmenu-open' );
+      disableOther( 'showRight_1' );
+      return false;
+      };
+      showRight_2.onclick = function(event) {
+      "use strict";
+      event.preventDefault();
+      classie.toggle( this, 'active' );
+      classie.toggle( menuRight, 'cbp-spmenu-open' );
+      disableOther( 'showRight_2' );
+      return false;
+      };
+      hideRight.onclick = function(event) {
+      "use strict";
+      event.preventDefault();
+      classie.toggle( this, 'active' );
+      classie.toggle( menuRight, 'cbp-spmenu-open' );
+      disableOther( 'showRight_2' );
+      return false;
+      };
+    // Nav Bar show/hide after scrolling
+    script.
+      var $head = $( '#menu_bar' );
+      $( '.menu_bar-waypoint' ).each( function(i) {
+      var $el = $( this ),
+      animClassDown = $el.data( 'animateDown' ),
+      animClassUp = $el.data( 'animateUp' );
+      $el.waypoint( function( direction ) {
+      if( direction === 'down' && animClassDown ) {
+      $head.attr('class', 'menu_bar ' + animClassDown);
+      }
+      else if( direction === 'up' && animClassUp ){
+      $head.attr('class', 'menu_bar ' + animClassUp);
+      }
+      }, { offset: function() {
+      navbarheight = $("#menu_bar").outerHeight()+1;
+      return navbarheight;
+      }
+      } );
+      } );
