@@ -28,6 +28,25 @@
     <link href="css/owl.transitions.css" rel="stylesheet" media="screen">                        <!-- Owl - Carousel -->
 
 
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    
+	<script>
+  	// Initialize Firebase
+  	var config = {
+  		apiKey: "AIzaSyBqFglWXkEIl8CBRMPObNVmwQLsXcnQHwc",
+  		authDomain: "valence.firebaseapp.com",
+  		databaseURL: "https://valence.firebaseio.com",
+  		storageBucket: "project-22693824267288721.appspot.com",
+  	};
+ 	 firebase.initializeApp(config);
+
+ 	 function addNewsletter() {
+ 	 	firebase.database().ref().child('Newsletter').push(document.getElementById('email').value);
+ 	 }
+
+  	</script>
+
+
 	<!-- Modernizer and IE specyfic files -->
 	<script src="js/modernizr.custom.js"></script>
 
@@ -288,13 +307,13 @@
 
 					<!-- Newsletter Form -->
 		  			<div class="newsletter_form">
-		  				<form action="php/send.php" method="post" id="subscribe-form">
+		  				<form action="javascript:addNewsletter()" id="subscribeform">
 		  				<div class="input-field">
 		  					<div data-icon="&#xe563;" class="prefix"></div>
-			  				<input id="email" type="email" name="email" class="validate">
+			  				<input id="email" type="email" name="email" id="email" class="validate">
 			  				<label for="email">Email address</label>
 			  			</div>
-			  			<button class="btn waves-effect waves-light subscribe-submit" type="submit" name="action" id="subscribe-form-submit">Subscribe Now</button>
+			  			<button class="btn waves-effect waves-light subscribe-submit" name="Submit" id="subscribe-form-submit">Subscribe Now</button>
 			  			</form>
 			  			<div id="preview"></div>
 		  			</div>
@@ -318,7 +337,7 @@
 					<ul class="icon_list">
 						<li><div data-icon="&#xe1b4;" class="icon_small float-left"></div><h6>430 Cross Street, Ann Arbor,<br>United States</h6></li>
 						<li><div data-icon="&#xe23a;" class="icon_small float-left"></div><h6>(800) 456-7890</h6></li>
-						<li><div data-icon="&#xe242;" class="icon_small float-left"></div><h6><a href="mailto:webdesign@shegy.pl">kyle@valenceios.com</a></h6></li>
+						<li><div data-icon="&#xe242;" class="icon_small float-left"></div><h6><a href="mailto:kyle@valenceios.com">kyle@valenceios.com</a></h6></li>
 					</ul>
 					
 					</div>
@@ -386,19 +405,6 @@
 
 
 	</div><!-- //preloader -->
-
-	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-	<script>
-  // Initialize Firebase
-  var config = {
-  	apiKey: "AIzaSyBqFglWXkEIl8CBRMPObNVmwQLsXcnQHwc",
-  	authDomain: "valence.firebaseapp.com",
-  	databaseURL: "https://valence.firebaseio.com",
-  	storageBucket: "project-22693824267288721.appspot.com",
-  };
-  firebase.initializeApp(config);
-  </script>
-
 
 	<!-- JavaScript plugins comes here -->
     <script src="js/jquery-2.1.3.min.js"></script>        <!-- jQuery -->

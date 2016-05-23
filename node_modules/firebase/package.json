@@ -1,0 +1,55 @@
+{
+  "name": "firebase",
+  "version": "3.0.2",
+  "description": "Firebase JavaScript library for web and Node.js",
+  "author": {
+    "name": "Firebase",
+    "email": "firebase-support@google.com",
+    "url": "https://firebase.google.com/"
+  },
+  "homepage": "https://firebase.google.com/",
+  "main": "firebase-node.js",
+  "browser": "firebase-browser.js",
+  "keywords": [
+    "Firebase",
+    "realtime",
+    "database",
+    "storage",
+    "authentication"
+  ],
+  "dependencies": {
+    "es6-promise": "3.2.1",
+    "faye-websocket": "0.9.3",
+    "jsonwebtoken": "5.7.0"
+  },
+  "repository": {
+    "type": "none",
+    "url": "https://firebase.google.com/"
+  },
+  "_id": "firebase@3.0.2",
+  "_shasum": "61be79b4cc4cb49f19cb5c13bce8eaddaf65e9cd",
+  "_resolved": "https://registry.npmjs.org/firebase/-/firebase-3.0.2.tgz",
+  "_from": "firebase@*",
+  "scripts": {},
+  "_npmVersion": "2.7.5",
+  "_nodeVersion": "0.10.38",
+  "_npmUser": {
+    "name": "firebase",
+    "email": "operations@firebase.com"
+  },
+  "maintainers": [
+    {
+      "name": "firebase",
+      "email": "info@envolve.com"
+    }
+  ],
+  "dist": {
+    "shasum": "61be79b4cc4cb49f19cb5c13bce8eaddaf65e9cd",
+    "tarball": "https://registry.npmjs.org/firebase/-/firebase-3.0.2.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/firebase-3.0.2.tgz_1463713712206_0.24876378220506012"
+  },
+  "directories": {}
+}
